@@ -3763,29 +3763,24 @@ input, select, textarea {
 		max-width: 72rem;
 		z-index: 2;
 	}
-		#main {    /* Existing styles */}
-	.tab-content {
-   	 /* Existing styles for tab content */
-	}
+		.posts-container {
+    			display: flex;
+    			flex-wrap: wrap;
+    			justify-content: space-between; /* Adjust alignment as needed */
+		}
 
-	.posts-container {
-   	 	display: flex;
-    		flex-wrap: wrap;
-	}
+		.posts-container article {
+    			flex-basis: calc(50% - 20px); /* Adjust width as needed */
+    			margin-bottom: 20px; /* Add space between articles */
+		}
 
-	.posts-container article {
-    		width: calc(50% - 2rem); /* Adjust width and margins */
-    		margin: 1rem;
-	}
+		@media screen and (max-width: 768px) {
+    		.posts-container article {
+        		flex-basis: calc(100% - 20px); /* Full width on smaller screens */
+    			}
+		}
 
-	/* Adjustments for smaller screens */
-	@media screen and (max-width: 736px) {
-   		 .posts-container article {
-       			 width: calc(100% - 2rem);
-    		}
-	}
-	
-
+		
 		#main > * {
 			padding: 4rem 4rem 2rem 4rem ;
 			border-top: solid 2px #eeeeee;
