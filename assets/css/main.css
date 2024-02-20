@@ -3763,6 +3763,28 @@ input, select, textarea {
 		max-width: 72rem;
 		z-index: 2;
 	}
+		#main {    /* Existing styles */}
+	.tab-content {
+   	 /* Existing styles for tab content */
+	}
+
+	.posts-container {
+   	 	display: flex;
+    		flex-wrap: wrap;
+	}
+
+	.posts-container article {
+    		width: calc(50% - 2rem); /* Adjust width and margins */
+    		margin: 1rem;
+	}
+
+	/* Adjustments for smaller screens */
+	@media screen and (max-width: 736px) {
+   		 .posts-container article {
+       			 width: calc(100% - 2rem);
+    		}
+	}
+	
 
 		#main > * {
 			padding: 4rem 4rem 2rem 4rem ;
